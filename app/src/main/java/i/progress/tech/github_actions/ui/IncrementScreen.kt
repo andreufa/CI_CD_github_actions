@@ -12,8 +12,13 @@ import androidx.compose.runtime.setValue
 @Composable
 fun IncrementScreen() {
     var i by remember { mutableIntStateOf(1) }
+    var y by remember { mutableIntStateOf(0) }
     Text("Value = $i")
+    Text("Value = $y")
     Button(onClick = {i++}) {
         Text("Plus")
+    }
+    Button(onClick = {y--}) {
+        Text("Minus")
     }
 }

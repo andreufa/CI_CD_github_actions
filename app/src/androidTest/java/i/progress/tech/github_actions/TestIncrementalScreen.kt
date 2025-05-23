@@ -21,4 +21,14 @@ class TestIncrementalScreen {
         composeTestRule.onNodeWithText("Plus").performClick()
         composeTestRule.onNodeWithText("Value = 2").assertExists()
     }
+    @Test
+    fun shouldShowMinus1(){
+        composeTestRule.setContent {
+            Github_actionsTheme {
+                IncrementScreen()
+            }
+        }
+        composeTestRule.onNodeWithText("Minus").performClick()
+        composeTestRule.onNodeWithText("Value = 0").assertExists()
+    }
 }
