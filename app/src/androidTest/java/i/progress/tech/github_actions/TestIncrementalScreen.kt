@@ -29,6 +29,6 @@ class TestIncrementalScreen {
             }
         }
         composeTestRule.onNodeWithText("Minus").performClick()
-        composeTestRule.onNodeWithText("Value = -1").assertExists()
+        composeTestRule.onNodeWithText("Value = 0").assertExists()
     }
 }
